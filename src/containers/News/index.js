@@ -27,7 +27,7 @@ const News = ({ news, user, getNews, createNews, deleteNews, approveNews, findNe
       <div>
         {news.map((item, i) => <div key={i} className={styles.card}>
           <strong>{item.title}</strong>
-          <small>{item.created.toLocaleDateString()}</small>
+          <small>{item.created.toLocaleString()}</small>
           <p>{item.body}</p>
           <div>by <strong>{item.createdBy}</strong></div>
           {user.user === 'admin' && !item.approved && <div>
